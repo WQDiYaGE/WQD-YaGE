@@ -7035,6 +7035,26 @@ a.close.disabled {
   opacity: 1;
 }
 
+.carousel-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.carousel-container {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
 .carousel-caption {
   position: absolute;
   right: 15%;
@@ -11078,6 +11098,12 @@ h1, h2, h3, h4, h5, h6 {
   color: #695aa6;
 }
 
+h4, .h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
 .my-font {
   font-family: 'Baloo Paaji', cursive;
 }
@@ -11642,6 +11668,13 @@ pre .code {
   color: #fff;
 }
 
+.custom-navbar .logo img {
+  margin-top: -5px;
+  height: 50px; /* Adust the logo height */
+  width: auto;
+  display: block;
+}
+
 .custom-navbar .container {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -12045,6 +12078,7 @@ pre .code {
   }
 }
 
+
 .header {
   position: relative;
   height: 100vh;
@@ -12208,7 +12242,11 @@ pre .code {
 
 /* sections */
 .section {
-  padding: 70px 10px;
+  padding: 120px 10px;
+  min-height: 120vh; /* Ensures the section takes up the full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .section .section-title {
@@ -12232,3 +12270,91 @@ pre .code {
 .section-lg {
   padding: 100px 0 !important;
 }
+
+
+/* Skills Section (Reusing Service Section Styles) */
+.service {
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.icon-box {
+  width: 60px;
+  height: 30px;
+  line-height: 50px;
+  background: var(--primary-color);
+  color: #fff;
+  font-size: 30px;
+  color: #007bff;
+  display: block;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: background 0.3s ease-in-out;
+}
+
+.service:hover .icon-box {
+  background: var(--secondary-color);
+}
+
+.service-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.service-text {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+  margin-bottom: 30px;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+}
+
+.project-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+
+.project-text {
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+.project-links a {
+  margin: 5px;
+}
+
